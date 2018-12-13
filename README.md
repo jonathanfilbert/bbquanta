@@ -11,3 +11,8 @@ Framework yang digunakan:
 1. Django 1.11
 2. Materialize CSS
 3. HTML/CSS 
+
+Tidak bisa anda run local karena file **client_secret.json** tidak bisa dishare untuk keperluan keamanan.
+Kontak saya melalui:
+jonathanflisyanto@gmail.com
+atau buat sebuah *issue* apabila anda merasa ingin berkontribusi.
