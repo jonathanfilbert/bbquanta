@@ -5,4 +5,9 @@
 
 
 Google sheet yang diintegrasi adalah yang dihasilkan dari form:
-https://docs.google.com/forms/d/e/1FAIpQLScLywM3zYLAhvgjNhE-ZwkrTYsocbiuwooOOqNKR3Jsd0hEtQ/viewform?usp=sf_link
+https://goo.gl/forms/hwXjV4A1ddPUQISg2
+
+Framework yang digunakan:
+1. Django 1.11
+2. Materialize CSS
+3. HTML/CSS 
