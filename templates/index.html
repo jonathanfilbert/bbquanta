@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Jadwal BBQ Quanta</title>
+        <!-- Import Materialize via CDN -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- import font from Gfont -->
+        <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper blue darken-2">
+                <a href="#" class="brand-logo center">Jadwal BBQ Quanta</a>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 right">
+                    <div class="card-panel orange right">
+                        <div class="white-text">
+                            <span>Jumlah BBQ minggu ini: {{jumlah}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- List BBQ Hari ini -->
+            <div class="row">
+                <div class="col s8">
+                    <h5 class="left">Today</h5>
+                </div>
+            </div>
+            {# template tags #}
+            {% for matkul,nama,tanggal,grup,waktu in inihari %}
+            <div class="col s8 offset-s2">
+                <div class="card blue">
+                    <div class="card-content white-text">
+                        <span class="card-title">BBQ {{matkul}} </span>
+                        <p>Pengajar: {{nama}} </p>
+                        <p>Tanggal: {{tanggal}} </p>
+                        <p>Jam {{waktu}}</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="//{{grup}}">Grup Line</a>
+                    </div>
+                </div>
+            </div>
+        {%endfor%}
+        <br>
+        <div class="row">
+                <div class="col s8">
+                    <h5 class="left">This week:</h5>
+                </div>
+            </div>
+            <!-- List BBQ: -->
+            {# template Tags #}
+            {% for matkul,nama,tanggal,grup,waktu in data %}
+                <div class="col s8 offset-s2">
+                    <div class="card white">
+                        <div class="card-content black-text">
+                            <span class="card-title">BBQ {{matkul}} </span>
+                            <p>Pengajar: {{nama}} </p>
+                            <p>Tanggal: {{tanggal}} </p>
+                            <p>Jam {{waktu}}</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="//{{grup}}">Grup Line</a>
+                        </div>
+                    </div>
+                </div>
+            {%endfor%}
+        </div>
+        <!-- import Js untuk Materialize -->
+    </body>
+</html>

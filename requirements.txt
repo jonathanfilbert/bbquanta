@@ -1,0 +1,8 @@
+django==1.11.*
+gspread
+gunicorn
+oauth2client
+datetime
+whitenoise==3.3.0
+django-cors-headers
+django-heroku
